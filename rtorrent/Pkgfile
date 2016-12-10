@@ -1,0 +1,16 @@
+# Description: BitTorrent client
+# URL:         https://rakshasa.github.io/rtorrent
+# Maintainer:  lounqe
+# Depends on:  ncurses libtorrent libsigc++
+
+name=rtorrent
+version=0.9.6
+release=1
+source=(http://rtorrent.net/downloads/rtorrent-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
