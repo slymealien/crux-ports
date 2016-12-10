@@ -1,0 +1,23 @@
+# Description: A standalone application to see what is playing in your favourite music player (this is the development release)
+# URL: https://launchpad.net/$name
+# Maintainer: 
+# Packager: lounge
+# Depends on: dbus-python python2 pygtk python2-xdg ttf-liberation intltool gettext
+
+name=covergloobus
+version=1.7.3
+release=0
+source=(http://ppa.launchpad.net/gloobus-dev/covergloobus/ubuntu/pool/main/c/covergloobus/covergloobus_$version.tar.gz)
+
+build() {
+    cd $name-$version
+    export PYTHON=python2
+    find -type f -exec sed -ri \
+        -e 's:python\b:&2:' \
+        -e 's:AM_PROG_MKDIR_P:AC_PROG_MKDIR_P:g' '{}' \;
+    autoreconf -fi
+    ./configure --prefix=/usr --sysconfdir=/etc
+    make
+
+    make DESTDIR=$PKG install
+}
