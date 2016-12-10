@@ -1,0 +1,16 @@
+# Description: Python MPD client library
+# URL: http://pypi.python.org/pypi/python-mpd2
+# Maintainer: 
+# Packager: lounge
+# Depends on: python-distribute python3 python3-setuptools
+
+name=python-mpd2
+version=0.5.5
+release=1
+source=("http://pypi.python.org/packages/source/p/python-mpd2/$name-$version.tar.gz")
+
+build() {
+  cd $name-$version
+  python3 setup.py install --prefix=/usr --root=$PKG
+}
+
