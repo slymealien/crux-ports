@@ -1,8 +1,7 @@
 # Description: A standalone application to see what is playing in your favourite music player (this is the development release)
 # URL: https://launchpad.net/$name
-# Maintainer: 
 # Packager: lounge
-# Depends on: dbus-python python2 pygtk python2-xdg ttf-liberation intltool gettext
+# Depends on: python pygtk ttf-liberation intltool gettext pyxdg 
 
 name=covergloobus
 version=1.7.3
