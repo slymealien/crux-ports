@@ -1,0 +1,25 @@
+# Description: Queries the X Resource Database
+# URL: https://github.com/arianon}
+# Maintainer: 
+# Packager: lounge
+# Depends on: xorg-libx11 git
+
+name=xrq
+version=8
+release=1
+source=()
+
+build() {
+	cd $PKGMK_SOURCE_DIR
+
+	if cd $name; then
+		git fetch -q; git reset --hard origin/master
+	else
+		git clone git://github.com/arianon/$name $name
+		cd $name
+	fi
+	
+	make
+	make DESTDIR="$PKG" install
+	install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+}
