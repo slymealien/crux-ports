@@ -1,0 +1,23 @@
+# Description: Small pager for monsterwm which displays the number of desktops and number of windows on each desktop in a thin bar (last git pull)
+# URL: https://github.com/c00kiemon5ter/mopag
+# Maintainer: 
+# Packager: lounge
+# Depends on: xorg-libx11 git
+
+name=mopag
+version=20121101
+release=1
+source=()
+
+  build() {
+	cd $PKGMK_SOURCE_DIR
+
+	if cd $name; then
+		git fetch -q; git reset --hard origin/master
+	else
+		git clone git://github.com/c00kiemon5ter/$name $name
+	fi
+
+  make || return 1
+  make DESTDIR=$PKG install
+}
