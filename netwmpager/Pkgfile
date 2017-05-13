@@ -1,0 +1,18 @@
+# Description: A NetWM/EWMH compatible pager
+# URL: http://onion.dynserv.net/~timo/?pageProjects/netwmpager
+# Maintainer: 
+# Packager: lounge
+# Depends on: xorg-libxft
+
+name=netwmpager
+version=2.05
+release=2
+source=(http://sourceforge.net/projects/sf-xpaint/files/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}
+
