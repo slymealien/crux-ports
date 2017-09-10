@@ -5,7 +5,7 @@
 name=ffmpegthumbnailer
 version=2.2.0
 release=1
-source=(https://github.com/jareksed/$name/archive/$version.tar.gz)
+source=(https://github.com/dirkvdb/$name/archive/$version.tar.gz)
 
 build() {
 	cd $name-$version
