@@ -18,7 +18,7 @@ source=()
 		cd $name
 	fi
 	
-	cmake -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_INSTALL_LIBDIR="/usr/lib" -DCMAKE_BUILD_TYPE=Release -DWITH_QT5=TRUE
+	cmake -DCMAKE_INSTALL_PREFIX="/usr -DCMAKE_INSTALL_LIBDIR="/usr/lib -DCMAKE_BUILD_TYPE=Release -DWITH_QT5=TRUE
 	make
-	make DESTDIR="$PKG" install
+	make DESTDIR=$PKG install
 }
