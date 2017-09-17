@@ -1,7 +1,7 @@
 # Description: A feature-rich screen recorder that supports X11 and OpenGL. (Git version)
 # URL: http://www.maartenbaert.be/simplescreenrecorder/
 # Packager: lounge
-# Depends on: qt4 qt5 ffmpeg pulseaudio alsa-lib glu xorg-libx11 xorg-libx11-32 xorg-libxfixes xorg-libxfixes-32 xorg-libxext xorg-libxi git
+# Depends on: qt4 qt5 ffmpeg pulseaudio jack alsa-lib glu xorg-libx11 xorg-libx11-32 xorg-libxfixes xorg-libxfixes-32 xorg-libxext xorg-libxi git
 
 name=ssr
 version=git
