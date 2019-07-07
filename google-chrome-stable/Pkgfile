@@ -1,6 +1,5 @@
 # Description: Google Chrome Browser
 # URL:         http://chrome.google.com
-# Maintainer:  lounge
 # Depends on:  gtk gconf nss cups libexif
 
 name=google-chrome
